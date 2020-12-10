@@ -17,7 +17,7 @@ $Functions->summonPage("Accueil");
 
 		<div class="row">
 
-			<?php $result = $BDD->query("SELECT * FROM frontender_blog");
+			<?php $result = $BDD->query("SELECT * FROM stanislash_blog");
 
 			foreach ($result as $row) { ?>
 				<div class="col-lg-4 col-md-12 mb-lg-0 mb-4 mt-4">
