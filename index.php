@@ -19,7 +19,15 @@ $Functions->summonPage("Accueil");
 
 			<?php $result = $BDD->query("SELECT * FROM stanislash_blog");
 
-			foreach ($result as $row) { ?>
+			foreach ($result as $row) {
+				$longueur_max = 100;
+				$string = $row['content'];
+
+				if (strlen($string) > $longueur_max) {
+					$string = wordwrap($string, $longueur_max);
+					$string = substr($string, 0, strpos($string, "\n"));
+				}
+				?>
 				<div class="col-lg-4 col-md-12 mb-lg-0 mb-4 mt-4">
 					<div class="card hoverable">
 
@@ -31,7 +39,7 @@ $Functions->summonPage("Accueil");
 
 							<h4><a href="article.php?q=<?= $row['id'] ?>"><?= $row['title'] ?></a></h4> <!-- TITRE DE LA CARD + LIEN DU POST -->
 
-							<p class="card-title text-muted font-small mt-3 mb-2"><?= substr($row['content'], 0, 150) . '...' ?></p> <!-- DESCRIPTION COURTE -->
+							<p class="card-title text-muted font-small mt-3 mb-2"><?= $string . '...' ?></p> <!-- DESCRIPTION COURTE -->
 
 							<a type="button" class="btn btn-outline-primary mx-0" href="article.php?q=<?= $row['id'] ?>">Lire le slash<i class="fa fa-angle-right ml-2"></i></a> <!-- LIEN DU POST -->
 
