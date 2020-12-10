@@ -80,6 +80,11 @@ $Functions->summonPage("Contact");
 
 		</div>
 
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Vous voulez soumettre un slash ?</h5>
+				<p class="card-text">Mettez dans votre message votre plus belle punch et son explication et comment l'utiliser, les meilleures seront sélectionnées et postées sur le site 🙃</p>
+			</div>
 		</div>
 
 		<hr class="mb-5 mt-4">
