@@ -8,10 +8,7 @@ $message = $_POST['message'];
 if(isset( $_POST['subject']))
 $subject = $_POST['subject'];
 
-$content="
-	Expediteur : $name
-	\n Email : $email
-	\n Message : $message
+$content="Expediteur : $name\n Email : $email\n Message : $message
 ";
 $mailheader = "From: $email \r\n";
 

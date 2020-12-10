@@ -24,7 +24,7 @@ $Functions->summonPage($article['title']);
 					<div class="card-body card-body-cascade text-center">
 						<h3 class="font-weight-bold"><a><?= $article['title'] ?></a></h3>
 
-						<p>Ecrit par <a><strong><?= $article['author'] ?></strong></a>, <?= date("d/m/Y H:i", strtotime($article['created_at'])) ?></p>
+						<p>Slash écrit par <a><strong><?= $article['author'] ?></strong></a>, <?= date("d/m/Y H:i", strtotime($article['created_at'])) ?></p>
 					</div>
 				</div>
 

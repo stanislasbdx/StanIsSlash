@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title><?= $title ?></title>
+	<title><?= $title ?> - Stani/</title>
 
 	<link rel="shortcut icon" href="https://media.discordapp.net/attachments/610108081157963787/758399366356140042/Logo_new.jpg">
 
