@@ -12,5 +12,5 @@ $content="Expediteur : $name\n Email : $email\n Message : $message
 ";
 $mailheader = "From: $email \r\n";
 
-mail("perso@stan1712.com", $subject, $content, $mailheader) or die("Erreur !");
-echo "L'email à été envoyé !";
+mail("stanislash@stan1712.com", $subject, $content, $mailheader) or header("Location: ../contact.php?r=0");
+header("Location: ../contact.php?r=1");

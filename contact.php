@@ -7,8 +7,19 @@ $Functions->summonPage("Contact");
 ?>
 
 <div class="container mt-5">
+	<?php
+	if (isset($_GET['r']) && $_GET['r']) {
 
-	<section class="mb-4">
+		if ($_GET['r'] == 1) { ?>
+			<div class="alert alert-success" role="alert">
+				L'email a été envoyé ! 👌
+			</div>
+		<?php } else if ($_GET['r'] == 0) { ?>
+			<div class="alert alert-danger" role="alert">
+				Une erreur est survenue :c
+			</div>
+		<?php } ?>
+	<?php } ?>
 
 		<!--Section heading-->
 		<h2 class="h1-responsive font-weight-bold text-center my-4">Contact </h2>
