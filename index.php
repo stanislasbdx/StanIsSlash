@@ -17,7 +17,7 @@ $Functions->summonPage("Accueil");
 
 		<div class="row">
 
-			<?php $result = $BDD->query("SELECT * FROM stanislash_blog");
+			<?php $result = $BDD->query("SELECT * FROM stanislash_blog ORDER BY created_at DESC");
 
 			foreach ($result as $row) {
 				$longueur_max = 100;
