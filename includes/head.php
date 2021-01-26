@@ -15,6 +15,27 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
 	<!-- MDB -->
 	<link rel="stylesheet" href="assets/css/mdb.min.css" />
+
+	<?php
+		if($_GET['q'] != null){ ?>
+			<meta property="og:title" content="<?= $title ?>" />
+			<meta property="og:description" content="Chiné sur StanIsSlash" />
+			<meta property="og:url" content="<?= 'https://slash.stan1712.com?q=' . $_GET['q'] ?>" />
+		<?php }
+		else { ?>
+			<meta property="og:title" content="StanIsSlash" />
+			<meta property="og:description" content="Les plus belles punchs à utiliser en société." />
+			<meta property="og:url" content="'https://slash.stan1712.com/'" />
+		<?php }
+		
+		if($image){ ?>
+			<meta property="og:image" content="<?= $image ?>" />
+			<meta name="twitter:card" content="summary_large_image">
+		<?php }
+	?>
+
+	<meta property="og:type" content="website" />
+	<meta name="theme-color" content="#2866F1">
 </head>
 
 <body>

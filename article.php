@@ -5,7 +5,7 @@ require("system/core.php");
 $result = $BDD->query("SELECT * FROM stanislash_blog WHERE id=" . $_GET['q']);
 $article = $result->fetch_assoc();
 
-$Functions->summonPage($article['title']);
+$Functions->summonPage($article['title'], $article['image']);
 
 ?>
 
